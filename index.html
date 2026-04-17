@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Autoavaliação Evangelização Discipuladora</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page-shell">
+    <section class="intro">
+      <div class="intro-copy">
+        <p class="eyebrow">Autoavaliação</p>
+        <h1>Autoavaliação Evangelização Discipuladora</h1>
+        <p class="lead">
+          Responda com sinceridade e observe como este pilar tem aparecido no seu caminhar diário.
+        </p>
+      </div>
+      <img
+        src="https://images.unsplash.com/photo-1507692049790-de58290a4334?auto=format&fit=crop&w=900&q=80"
+        alt="Bíblia aberta em uma mesa"
+        class="intro-image"
+      >
+    </section>
+
+    <section class="score-scale" aria-labelledby="scale-title">
+      <h2 id="scale-title">Escala de pontuação</h2>
+      <div class="scale-grid">
+        <div><strong>0</strong><span>Nunca ou quase nunca</span></div>
+        <div><strong>1</strong><span>Raramente</span></div>
+        <div><strong>2</strong><span>Frequentemente</span></div>
+        <div><strong>3</strong><span>Sempre ou quase sempre</span></div>
+      </div>
+    </section>
+
+    <section class="assessment-layout">
+      <form id="assessmentForm" class="assessment-form">
+        <div class="person-fields">
+          <label for="name">
+            Nome
+            <input type="text" id="name" name="name" placeholder="Seu nome" required>
+          </label>
+        </div>
+
+        <fieldset class="questions">
+          <legend>Responda às cinco perguntas</legend>
+
+          <div class="question">
+            <p>1. Tenho cultivado relacionamentos intencionais com pessoas que ainda precisam conhecer Jesus.</p>
+            <div class="options" role="radiogroup" aria-label="Pergunta 1">
+              <label><input type="radio" name="q1" value="0" required> 0</label>
+              <label><input type="radio" name="q1" value="1"> 1</label>
+              <label><input type="radio" name="q1" value="2"> 2</label>
+              <label><input type="radio" name="q1" value="3"> 3</label>
+            </div>
+          </div>
+
+          <div class="question">
+            <p>2. Oro regularmente por pessoas específicas que desejo acompanhar em uma jornada de fé.</p>
+            <div class="options" role="radiogroup" aria-label="Pergunta 2">
+              <label><input type="radio" name="q2" value="0" required> 0</label>
+              <label><input type="radio" name="q2" value="1"> 1</label>
+              <label><input type="radio" name="q2" value="2"> 2</label>
+              <label><input type="radio" name="q2" value="3"> 3</label>
+            </div>
+          </div>
+
+          <div class="question">
+            <p>3. Compartilho o evangelho de forma simples, natural e fiel quando surgem oportunidades.</p>
+            <div class="options" role="radiogroup" aria-label="Pergunta 3">
+              <label><input type="radio" name="q3" value="0" required> 0</label>
+              <label><input type="radio" name="q3" value="1"> 1</label>
+              <label><input type="radio" name="q3" value="2"> 2</label>
+              <label><input type="radio" name="q3" value="3"> 3</label>
+            </div>
+          </div>
+
+          <div class="question">
+            <p>4. Acompanho pessoas novas na fé, ajudando-as a dar passos práticos de discipulado.</p>
+            <div class="options" role="radiogroup" aria-label="Pergunta 4">
+              <label><input type="radio" name="q4" value="0" required> 0</label>
+              <label><input type="radio" name="q4" value="1"> 1</label>
+              <label><input type="radio" name="q4" value="2"> 2</label>
+              <label><input type="radio" name="q4" value="3"> 3</label>
+            </div>
+          </div>
+
+          <div class="question">
+            <p>5. Minha rotina mostra compromisso com formar discípulos, e não apenas participar de atividades.</p>
+            <div class="options" role="radiogroup" aria-label="Pergunta 5">
+              <label><input type="radio" name="q5" value="0" required> 0</label>
+              <label><input type="radio" name="q5" value="1"> 1</label>
+              <label><input type="radio" name="q5" value="2"> 2</label>
+              <label><input type="radio" name="q5" value="3"> 3</label>
+            </div>
+          </div>
+        </fieldset>
+
+        <button type="submit">Ver meu resultado</button>
+      </form>
+
+      <aside class="result-panel" aria-live="polite">
+        <div id="result" class="result-empty">
+          <span class="result-kicker">Resultado</span>
+          <h2>Aguardando suas respostas</h2>
+          <p>Após enviar, sua pontuação total e a análise aparecerão aqui.</p>
+        </div>
+        <div class="chart-wrap">
+          <canvas id="radarChart" aria-label="Gráfico radar das respostas" role="img"></canvas>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
